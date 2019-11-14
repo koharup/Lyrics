@@ -22,7 +22,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-//        //realmを開く
+//        //realmを開
 //        Realm.init(this)
 //        realm = Realm.getDefaultInstance()
 //
