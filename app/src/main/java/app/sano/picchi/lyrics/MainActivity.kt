@@ -24,14 +24,14 @@ class MainActivity : AppCompatActivity() {
 
 
         listView = findViewById(R.id.listView) as ListView
-//
-//        listView.onItemClickListener =
-//            AdapterView.OnItemClickListener { parent, view, position, id ->
-//                val memo = parent.getItemAtPosition(position) as Memo
-//                val intent = Intent(this@MainActivity, DetailActivity::class.java)
-//                intent.putExtra("updateDate", memo.updateDate)
-//                startActivity(intent)
-//            }
+
+        listView.onItemClickListener =
+            AdapterView.OnItemClickListener { parent, view, position, id ->
+                val memo = parent.getItemAtPosition(position) as Memo
+                val intent = Intent(this@MainActivity, DetailActivity::class.java)
+                intent.putExtra("updateDate", memo.updateDate)
+                startActivity(intent)
+            }
     }
 
     fun setMemoList() {

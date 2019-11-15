@@ -22,3 +22,5 @@ class ExampleInstrumentedTest {
         assertEquals("app.sano.picchi.lyrics", appContext.packageName)
     }
 }
+
+//テスト

@@ -29,8 +29,12 @@ public class MemoAdapter extends ArrayAdapter<Memo> {
 
         TextView titleText = (TextView) convertView.findViewById(R.id.titleText);
         TextView contentText = (TextView) convertView.findViewById(R.id.contentText);
+        //TextView mainwordText = (TextView) convertView.findViewById(R.id.mainwordEditText);
+        //TextView word2Text = (TextView) convertView.findViewById(R.id.subwordEditText);
+
         titleText.setText(memo.title);
         contentText.setText(memo.content);
+        //mainwordText.setText(memo.mainword);
 
         return convertView;
     }
