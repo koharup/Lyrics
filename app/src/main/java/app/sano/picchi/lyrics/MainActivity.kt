@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         listView.onItemClickListener =
             AdapterView.OnItemClickListener { parent, view, position, id ->
                 val memo = parent.getItemAtPosition(position) as Memo
-                val intent = Intent(this@MainActivity, DetailActivity::class.java)
+                val intent = Intent(this@MainActivity, TranslationActivity::class.java)
                 intent.putExtra("updateDate", memo.updateDate)
                 startActivity(intent)
             }

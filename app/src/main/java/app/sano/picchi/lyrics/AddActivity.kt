@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import io.realm.Realm
+import kotlinx.android.synthetic.main.activity_add.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -17,8 +18,8 @@ class AddActivity : AppCompatActivity() {
     //EditText型の変数宣言
     lateinit var titleEditText: EditText
     lateinit var contentEditText: EditText
-    //lateinit var word1EditText: EditText
-    //lateinit var word2EditText: EditText
+    lateinit var word1EditText: EditText
+    lateinit var word2EditText: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,9 +65,10 @@ class AddActivity : AppCompatActivity() {
 
         //内容の取得
         val content = contentEditText.text.toString()
-//        //歌詞１の取得
-            //val word1 = word1EditText.text.toString()
-            //val word2 = word2EditText.text.toString()
+       //歌詞１の取得
+        //val word1 = word1EditText.text.toString()
+        //val word2 = word2EditText.text.toString()
+
 
 
 
