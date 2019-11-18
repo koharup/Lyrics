@@ -17,6 +17,8 @@ class AddActivity : AppCompatActivity() {
     //EditText型の変数宣言
     lateinit var titleEditText: EditText
     lateinit var contentEditText: EditText
+    //lateinit var word1EditText: EditText
+    //lateinit var word2EditText: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,9 +31,9 @@ class AddActivity : AppCompatActivity() {
         //関連付け
         titleEditText = findViewById(R.id.titleEditText) as EditText
         contentEditText = findViewById(R.id.contentEditText) as EditText
-//        word1EditText = findViewById(R.id.mainwordEditText) as EditText
-//        word2EditText = findViewById(R.id.subwordEditText) as EditText
-//
+        //word1EditText = findViewById(R.id.word1EditText) as EditText
+        //word2EditText = findViewById(R.id.word2EditText) as EditText
+
 
 
     }
@@ -44,6 +46,8 @@ class AddActivity : AppCompatActivity() {
             memo.title = title
             memo.updateDate = updateDate
             memo.content = content
+            //memo.word1 = word1
+            //memo.word2 = word2
 
 
         }
@@ -60,17 +64,15 @@ class AddActivity : AppCompatActivity() {
 
         //内容の取得
         val content = contentEditText.text.toString()
-
-//        //歌詞1の取得
-//        val word1 = word1EditText.text.toString()
-//
-//        //歌詞2の取得
-//        val word2 = word2EditText.text.toString()
+//        //歌詞１の取得
+            //val word1 = word1EditText.text.toString()
+            //val word2 = word2EditText.text.toString()
 
 
 
         //出力してみる
         check(title, updateDate, content)
+
 
         //保存
         save(title, updateDate, content)
@@ -89,13 +91,15 @@ class AddActivity : AppCompatActivity() {
         memo.title = title
         memo.updateDate = updateDate
         memo.content = content
-//        memo.word1 = word1
-//        memo.word2 = word2
+        //memo.word1 = word1
+        //memo.word2 = word2
 
         //ログに出してみる
         Log.d("Memo", memo.title)
         Log.d("Memo", memo.updateDate)
         Log.d("Memo", memo.content)
+        //Log.d( "Memo",memo.word1)
+        //Log.d("Memo",memo.word2)
 
 
     }

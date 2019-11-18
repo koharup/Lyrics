@@ -27,7 +27,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/mainwordEditText"
+            android:id="@+id/word1EditText"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -37,7 +37,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/subwordEditText"
+            android:id="@+id/word2EditText"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
