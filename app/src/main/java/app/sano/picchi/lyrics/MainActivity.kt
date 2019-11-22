@@ -5,13 +5,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import android.widget.EditText
 import android.widget.ListView
+import androidx.annotation.MainThread
+import androidx.core.view.get
 import io.realm.Realm
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var realm: Realm
     lateinit var listView: ListView
+
+    lateinit var searchWordEditText: EditText
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,17 +29,33 @@ class MainActivity : AppCompatActivity() {
         Realm.init(this)
         realm = Realm.getDefaultInstance()
 
+        searchWordEditText = findViewById(R.id.searchWordEditText) as EditText
+
+
 
         listView = findViewById(R.id.listView) as ListView
 
-        listView.onItemClickListener =
+        //詳細に画面遷移
+                    listView.onItemClickListener =
             AdapterView.OnItemClickListener { parent, view, position, id ->
                 val memo = parent.getItemAtPosition(position) as Memo
                 val intent = Intent(this@MainActivity, TranslationActivity::class.java)
                 intent.putExtra("updateDate", memo.updateDate)
                 startActivity(intent)
             }
+
+
+
     }
+
+
+
+
+
+
+
+
+
 
     fun setMemoList() {
         //realmから読み取る
@@ -64,4 +87,6 @@ class MainActivity : AppCompatActivity() {
         //realmを閉じる
         realm.close()
     }
+
+
 }
