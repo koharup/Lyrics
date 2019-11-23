@@ -32,8 +32,8 @@
             android:ems="10"
             android:hint="曲名"
             android:inputType="textPersonName"
-            android:textColor="#313131"
-            android:textColorHint="#313131"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark"
             android:textSize="30sp" />
 
 
@@ -47,8 +47,8 @@
             android:hint="アーティスト"
             android:inputType="textPersonName"
             android:lines="1"
-            android:textColor="#313131"
-            android:textColorHint="#313131"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark"
             android:textSize="20sp" />
 
 
@@ -56,8 +56,8 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#313131"
-            android:textColorHint="#313131"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark"
             android:textSize="10sp" />
 
         <TextView
@@ -69,8 +69,8 @@
             android:gravity="top"
             android:hint="歌詞1"
             android:inputType="textPersonName"
-            android:textColor="#313131"
-            android:textColorHint="#313131" />
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark" />
 
 
     </LinearLayout>

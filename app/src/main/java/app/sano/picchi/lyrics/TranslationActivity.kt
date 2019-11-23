@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ListView
 import io.realm.Realm
+import kotlinx.android.synthetic.main.activity_translation.*
 
 class TranslationActivity : AppCompatActivity() {
 
@@ -22,9 +23,24 @@ class TranslationActivity : AppCompatActivity() {
         Realm.init(this)
         realm = Realm.getDefaultInstance()
 
-        val intent: Intent = Intent(this,Translation2Activity::class.java)
+        showData()
+
+
 
     }
+
+    fun showData() {
+        val memo = realm.where(Memo::class.java).equalTo(
+            "updateDate",
+            intent.getStringExtra("updateDate")
+        ).findFirst()
+
+        titleText.setText(memo.title)
+        contentText.setText(memo.content)
+
+    }
+
+
 
     fun ChangeActivity(v: View) {
         val intent = Intent(this, Translation2Activity::class.java)

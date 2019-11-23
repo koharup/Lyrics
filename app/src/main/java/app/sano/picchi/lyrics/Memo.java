@@ -11,4 +11,5 @@ public class Memo extends RealmObject {
     public String content;
 
 
+
 }
