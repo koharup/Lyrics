@@ -39,7 +39,6 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:shadowColor="#FFFFFF"
-                android:text="Name"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#FFFFFF"
                 android:textSize="24sp" />
@@ -50,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:background="#74B4A4"
-                android:text="Button"
+                android:text="検索"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#FFFFFF"
                 android:textSize="20sp" />
