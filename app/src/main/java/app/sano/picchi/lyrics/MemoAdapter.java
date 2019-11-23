@@ -33,9 +33,9 @@ public class MemoAdapter extends ArrayAdapter<Memo> {
 
 
 
-        //titleTextにセットしてるmemoクラスのtitleを!!!
+        //titleTextにセットする(memoクラスのtitleを)!!!
         titleText.setText(memo.title);
-        contentText.setText(memo.updateDate);
+        contentText.setText(memo.content);
 
 
         return convertView;

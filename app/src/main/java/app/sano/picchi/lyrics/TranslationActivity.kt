@@ -26,7 +26,6 @@ class TranslationActivity : AppCompatActivity() {
         showData()
 
 
-
     }
 
     fun showData() {
@@ -37,6 +36,7 @@ class TranslationActivity : AppCompatActivity() {
 
         titleText.setText(memo.title)
         contentText.setText(memo.content)
+        updateText.setText(memo.updateDate)
 
     }
 
