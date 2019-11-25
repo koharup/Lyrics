@@ -35,8 +35,10 @@ class MainActivity : AppCompatActivity() {
 
         listView = findViewById(R.id.listView) as ListView
 
-        //詳細に画面遷移
-                    listView.onItemClickListener =
+
+
+
+        listView.onItemClickListener =
             AdapterView.OnItemClickListener { parent, view, position, id ->
                 val memo = parent.getItemAtPosition(position) as Memo
                 val intent = Intent(this@MainActivity, TranslationActivity::class.java)
@@ -46,12 +48,9 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+
     }
-
-
-
-
-
 
 
 
@@ -78,6 +77,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, AddActivity::class.java)
         startActivity(intent)
     }
+
 
     override fun onDestroy() {
         super.onDestroy()

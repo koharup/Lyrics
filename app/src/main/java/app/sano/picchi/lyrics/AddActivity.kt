@@ -38,7 +38,7 @@ class AddActivity : AppCompatActivity() {
 
     }
 
-    fun save(title: String, updateDate: String, content: String) {
+    fun save(title: String, updateDate: String, content: String, word1: String) {
 
         //メモを保存
         realm.executeTransaction {
@@ -46,6 +46,7 @@ class AddActivity : AppCompatActivity() {
             memo.title = title
             memo.updateDate = updateDate
             memo.content = content
+            memo.word1 = word1
 
 
         }
@@ -57,21 +58,21 @@ class AddActivity : AppCompatActivity() {
 
         //日付を取得
         val date = Date()
-        val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.JAPANESE)
+        val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.JAPANESE)
         val updateDate = sdf.format(date)
 
         //内容の取得
         val content = contentEditText.text.toString()
-        //歌詞１
+        //歌詞
         val word1 = word1EditText.text.toString()
 
 
         //出力してみる
-        check(title, updateDate, content, word1)
+        check(title, updateDate, content,word1)
 
 
         //保存
-        save(title, updateDate, content)
+        save(title, updateDate, content,word1)
 
         //画面を終了
         finish()
@@ -87,13 +88,14 @@ class AddActivity : AppCompatActivity() {
         memo.title = title
         memo.updateDate = updateDate
         memo.content = content
+        memo.word1 = word1
 
 
         //ログに出してみる
         Log.d("Memo", memo.title)
         Log.d("Memo", memo.updateDate)
         Log.d("Memo", memo.content)
-
+        Log.d("Memo",memo.word1)
 
     }
 

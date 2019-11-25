@@ -47,6 +47,11 @@ class TranslationActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun ChangeWritteActivity(v: View){
+        val intent = Intent(this,DetailActivity::class.java)
+        startActivity(intent)
+    }
+
 
 
 

@@ -13,10 +13,10 @@ class DetailActivity : AppCompatActivity() {
     lateinit var realm: Realm
 
     //EditText型の変数宣言
-    lateinit var titleText: EditText
-    lateinit var contentText: EditText
-
-
+    lateinit var titleEditText: EditText
+    lateinit var contentEditText: EditText
+    lateinit var word1EditText: EditText
+    lateinit var word2EditText: EditText
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,15 +24,12 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         //realmを開く
-        Realm.init(this)
         realm = Realm.getDefaultInstance()
 
-        //関連付け
-        titleText = findViewById(R.id.titleEditText) as EditText
-        contentText = findViewById(R.id.contentEditText) as EditText
+        titleEditText = findViewById(R.id.titleEditText) as EditText
+        contentEditText = findViewById(R.id.contentEditText) as EditText
 
         showData()
-
 
 
     }
@@ -40,7 +37,7 @@ class DetailActivity : AppCompatActivity() {
     fun showData() {
         val memo = realm.where(Memo::class.java).equalTo(
             "updateDate",
-            intent.getStringExtra("updateDate")
+            this.intent.getStringExtra("updateDate")
         ).findFirst()
 
         titleText.setText(memo.title)
@@ -50,7 +47,7 @@ class DetailActivity : AppCompatActivity() {
     fun update(view: View) {
         val memo = realm.where(Memo::class.java).equalTo(
             "updateDate",
-            intent.getStringExtra("updateDate")
+            this.intent.getStringExtra("updateDate")
         ).findFirst()
 
         //更新する

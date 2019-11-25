@@ -9,6 +9,9 @@ public class Memo extends RealmObject {
     public String updateDate;
     //内容
     public String content;
+    //歌詞
+    public String word1;
+
 
 
 

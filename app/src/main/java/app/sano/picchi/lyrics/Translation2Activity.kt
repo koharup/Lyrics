@@ -22,9 +22,8 @@ class Translation2Activity : AppCompatActivity() {
         //realmを開く
         realm = Realm.getDefaultInstance()
 
-        showData()
-
-
+        //showData()
+        
 
         backButton.setOnClickListener{
             finish()
